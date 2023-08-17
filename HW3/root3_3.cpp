@@ -1,12 +1,11 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
+#include <iomanip>
+using namespace std;
 
 #define EPSILON 1e-6
 
-using namespace std;
-
 // f(x) = x * x - 7
-
 int main() {
   double x = 2.0;
   
@@ -22,7 +21,7 @@ int main() {
     xNew = x - (f / f_prime);
   }
 
-  cout << x;
+  cout << fixed << setprecision(6) << x << endl;
   
   return 0;
 }

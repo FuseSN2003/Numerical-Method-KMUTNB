@@ -1,5 +1,6 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 #define EPSILON 1e-6
@@ -17,7 +18,7 @@ int main() {
     xNew = func(xOld);
   }
 
-  cout << xNew << endl;
+  cout << fixed << setprecision(6) << xNew << endl;
   
   return 0;
 }
