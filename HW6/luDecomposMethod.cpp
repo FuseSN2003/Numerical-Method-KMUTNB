@@ -56,7 +56,7 @@ int main() {
   luDecomposition(matrixA, matrixB, result);
 
   for(int i = 0; i < SIZE; i++) {
-    cout << result[i] << " ";
+    cout << "x" << i+1 << ": " << result[i] << endl;
   }
   
   return 0;
