@@ -4,8 +4,6 @@
 
 using namespace std;
 
-#define EPSILON 1e-6
-
 // f(x) = x^2 - 7
 double func(double x) {
   return pow(x, 2) - 7;
@@ -13,6 +11,7 @@ double func(double x) {
 
 int main() {
   double x0 = 1.0, x1 = 1.5, xi, f0, f1;
+  const double epsilon = 1e-6;
 
   do {
     f0 = func(x0);
@@ -23,7 +22,7 @@ int main() {
     x0 = x1;
     x1 = xi;
 
-  } while (fabs(x1-x0) > EPSILON);
+  } while (fabs(x1-x0) > epsilon);
 
   cout << fixed << setprecision(6) << xi << endl;
   
