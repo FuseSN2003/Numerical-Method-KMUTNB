@@ -2,21 +2,21 @@
 #include <cmath>
 #include <iomanip>
 
-#define SIZE 4
-
 using namespace std;
 
-void jacobiMethod(double a[][SIZE], double b[], double x[]) {
-  const double epsilon = 1e-3;
-  double xNew[SIZE] = {0.0};
+const int N = 4;
+const double EPSILON = 1e-3;
+
+void jacobiMethod(double a[][N], double b[], double x[]) {
+  double xNew[N] = {0.0};
   bool error;
   int iteration = 0;
   
   do {
     iteration++;
-    for(int i = 0; i < SIZE; i++) {
+    for(int i = 0; i < N; i++) {
       double sum = 0.0;
-      for(int j = 0; j < SIZE; j++) {
+      for(int j = 0; j < N; j++) {
         if(j != i) {
           sum += a[i][j] * x[j];
         }
@@ -25,14 +25,14 @@ void jacobiMethod(double a[][SIZE], double b[], double x[]) {
     }
 
     error = false;
-    for(int i = 0; i < SIZE; i++) {
-      if(fabs((xNew[i] - x[i]) / xNew[i]) * 100 > epsilon) {
+    for(int i = 0; i < N; i++) {
+      if(fabs((xNew[i] - x[i]) / xNew[i]) * 100 > EPSILON) {
         error = true;
         break;
       }
     }
     
-    for(int i = 0; i < SIZE; i++) {
+    for(int i = 0; i < N; i++) {
       x[i] = xNew[i];
     }
   } while(error);
@@ -41,18 +41,18 @@ void jacobiMethod(double a[][SIZE], double b[], double x[]) {
 }
 
 int main() {
-  double a[SIZE][SIZE] = {
+  double a[N][N] = {
     {5, 2, 0, 0},
     {2, 5, 2, 0},
     {0, 2, 5, 2},
     {0, 0, 2, 5},
   };
-  double b[SIZE] = {12, 17, 14, 7};
-  double x[SIZE] = {0.0};
+  double b[N] = {12, 17, 14, 7};
+  double x[N] = {0.0};
 
   jacobiMethod(a, b, x);
 
-  for(int i = 0; i < SIZE; i++) {
+  for(int i = 0; i < N; i++) {
     cout << "x" << i+1 << " = " << fixed << setprecision(6) << x[i] << endl;
   }
   
