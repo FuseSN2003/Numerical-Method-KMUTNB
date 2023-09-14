@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 #define SIZE 4
 
@@ -52,7 +53,7 @@ int main() {
   gaussSeidelMethod(a, b, x);
 
   for (int i = 0; i < SIZE; i++) {
-    cout << "x" << i + 1 << " = " << x[i] << endl;
+    cout << "x" << i + 1 << " = " << fixed << setprecision(6) << x[i] << endl;
   }
   
   return 0;
