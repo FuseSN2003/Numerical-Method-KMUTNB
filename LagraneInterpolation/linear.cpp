@@ -18,6 +18,8 @@ double lagraneInterpolation(double xValue[], double yValue[], double x, size_t s
 }
 
 int main() {
+  // x = 0, 20000, 40000, 60000, 80000
+  // y = 9.81, 9.7487, 9.6879, 9.6879 9.5682
   double xValue[] = {0, 80000};
   double yValue[] = {9.81, 9.5682};
   double x = 42235;
