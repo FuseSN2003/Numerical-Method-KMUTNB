@@ -1,0 +1,14 @@
+{
+  "name": "numerical-method",
+  "version": "1.0.0",
+  "description": "___*My Numerical Method homework and exercise*___",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^11.11.1"
+  }
+}

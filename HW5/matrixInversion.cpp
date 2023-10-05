@@ -65,16 +65,16 @@ void matrixInversion(const Matrix& matrixA, const Matrix& matrixB, Matrix& resul
 int main() {
   // Initialize matrix A
   Matrix matrixA = {
-    {-2, 3, 1},
-    {3, 4, -5},
-    {1, -2, 1}
+    {-9, 7, -19},
+    {14, -13, -6},
+    {16, 1, -4}
   };
 
   // Initialize matrix B
   Matrix matrixB = {
-    {9},
-    {0},
-    {-4}
+    {4000},
+    {1200},
+    {2350}
   };
 
   // Create a matrix to store the result
